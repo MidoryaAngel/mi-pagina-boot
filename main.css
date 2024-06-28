@@ -1,0 +1,189 @@
+@import url('http//fonts.googleapis.com/css2?family=Monserrat&display=swap');
+
+body{/*Escondera el menu si la caja sobrepasa el contenido*/
+    font-family: 'Monserrat',sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+}
+/*cambio de fuente, tamaño y negrita al menu y boton*/
+#menu li> a {
+    font-size:18px;
+    font-weight: bold;
+    color:#3f3f3f;
+}
+menu form> button{/*se aplican las propiedades cuando hay enlaces especificos bootstrap tiene prioridad
+    si boton esta dentro del elemento form(formulario) se aplican estas propiedades*/
+    font-size: 18px;
+    font-family: bold;
+
+}
+.caousel-inner{
+    max-height: 39rem;
+}
+
+@media (max-width:768px){/*adaptacion para pantalla pequeña con 90%*/
+    #intro,#comunidad {
+        width: 90%  !important;/*da prioridad sobre bootstrap*/
+    }
+
+    #comunidad p {/*referencia seccion de comunidad*/
+        display:non;
+
+    }
+    #bg-contacto{
+        position: relative;
+        top:-110px;
+    }
+}
+
+.servicio-fila{
+    width: 100% !important;
+    text-align: center;
+}
+
+@media (max-width:576px){/*pantallas muy pequeñas*/
+    .icono-wrap{
+        flex-wrap: wrap;
+    }
+}
+.mapa {
+    background: url(./Images/mapa_siliconValley.png);
+    width: 100% ;
+    height: 500px;
+    margin-top: 100px;
+   
+}
+
+#local{
+    background-color: #f3f3f3;
+    padding-bottom: 300px;
+    display: flex;
+    justify-content:center;
+}
+.wrapper {
+    width: 50%;
+    margin-left: 100px;
+    padding-top: 150px;
+}
+
+
+@media(max-width:1200px){/*pantalla ancha*/
+    #local{
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+    .wrapper{
+        width: 90%;
+        margin: auto;
+        padding-top: 50px;/*para hacer que lostextos a pantalla ancha y no pierda forma*/
+    }
+    
+
+}
+#numeros-local div {
+    padding: 0 20px 0 0 ;
+    height: 48px;
+}
+#numeros-local div:not(:last-child){/*Se hace un borde excepto al ultimo div*/
+    border-right: 2px solid #3f3f3f;
+
+}
+#numeros-local div:not(:first-child){/*apicar excepto al primer hijo*/
+    padding-left: 20px;
+
+}
+#numeros-local p{
+    margin: 0;
+}
+#bg-contacto{
+    position: relative;
+    top:-130px;
+}
+#seccion-contacto{
+    background-color: #1b2a4e;
+    min-height: 500px;
+    position:relative;
+
+}
+.operador{
+
+    top:20%;
+    width:100%;
+    background: scroll;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.operador img{
+    animation: mover 5s infinite;
+}
+
+#contenedor-formulario{
+    position:absolute;
+    top:35%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background-color: #fbfafa;
+    border-radius:5px;
+    max-width: 500px;
+    text-align: center;
+}
+#titulo-formulario{
+    color:3f3f3f;
+}
+
+footer{
+    margin-top: 148px;
+    background: #1b2a4e;
+    min-height:100px;
+}
+footer p{
+    color:#f3f3f3;
+    text-align: center;
+}
+#iconos i{
+    font-size: 26px;
+    padding: 0 8px;
+    color:#f3f3f3;
+}
+
+@keyframes mover{/*animcion operador*/
+    0%{ transform: translateY(15px);}
+}
+#img-peq img{
+    border-radius: 15%;
+}
+
+/*aqui empieza la animacion de las cuatro img (falta referenciarla*/
+#img-peq:hover img{
+	animation:  3s moverImagen 1 ;
+}
+@keyframes moverImagen{
+	25%{
+		transform: scale(0.8);
+		
+		
+	}
+	35%,75%{
+		transform: scale(1.2);
+
+	}
+	50%,95%{
+		transform: scale(1.5);
+	}
+	
+}
+#img-gde{
+    transition:all ease-in-out 0.3;
+
+}
+#img-gde:hover{
+    transform:scale(0.8);
+}
+
+nav li:hover{
+    background-color: cornflowerblue;
+    border-radius: 10%;
+
+}
