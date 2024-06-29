@@ -5,7 +5,7 @@ const typewriter = new Typewriter(app,{
     delay:75
 });
    
-Typewriter
-.typeSrtring('El valle de la tecnologia')
+typewriter
+.typeString('El valle de la tecnología')
 .pauseFor(200)
 .start();

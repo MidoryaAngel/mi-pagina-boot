@@ -159,6 +159,15 @@ footer p{
 #img-peq:hover img{
 	animation:  3s moverImagen 1 ;
 }
+#img-peq2 img{
+    border-radius: 15%;
+}
+
+/*aqui empieza la animacion de las cuatro img (falta referenciarla*/
+#img-peq2:hover img{
+	animation:  3s moverImagen 1 ;
+}
+
 @keyframes moverImagen{
 	25%{
 		transform: scale(0.8);
